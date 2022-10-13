@@ -1,0 +1,23 @@
+//===============================================================
+// Example: Write a function which takes two numbers and returns their sum
+// ==============================================================
+
+// 1. Can I restate the problem in my own words?
+//      Write a function that adds one number to another
+
+// 2. What are the inputs that go into the problem?
+//      - Consider data types
+//      - What about nulls/undefines?
+//      - What about more than two numbers
+
+// 3. What are the outputs that should come from the solution to the problem?
+//      - Consider data type
+
+// 4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem?
+
+// 5. How should I label the important pieces of data that are a part of the problem
+//       - Name of function
+//       - Name of inputs
+//       - Name of output
+
+
