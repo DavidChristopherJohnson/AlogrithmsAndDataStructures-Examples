@@ -17,5 +17,5 @@ const EndTime = performance.now();
 console.log(`Time Elapsed: ${(EndTime - startTime) / 1000} seconds.`)
 
 
-//BigO of N
+//BigO of n  -  O(n)
 //Runs in 0.10108316612243652 seconds where n = 100,000,000
