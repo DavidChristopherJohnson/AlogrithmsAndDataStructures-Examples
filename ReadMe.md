@@ -1,6 +1,6 @@
 # Algorithm and Data Structure Practise in JavaScript
 
-> **Note**
+> **Note**<br />
 > This is based on the [uDemy course by Colt Steele](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
 
 ---
