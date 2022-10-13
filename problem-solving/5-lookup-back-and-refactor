@@ -1,0 +1,70 @@
+
+//============================================================================================
+// Write a function which takes in a string and returns counts of each character in the string
+//============================================================================================
+
+// Just getting it working is not enough. You need to look at what you have 
+// and make sure it's the best it can be
+
+// function charCount(str) {
+//     // make object to return at end
+//     var result = {};
+
+//     // loop over string, for each character
+//     for (let i = 0; i < str.length; i++) {
+//         //  lower case character
+//         let char = str[i].toLowerCase();
+
+//         // else (special character or space) don't do anything
+//         // Could use regex, array of alpha-numeric characters, char codes, etc
+//         if (/[a-z0-9]/.test(char)) {
+//             // if char is a number/letter AND key in object, add one to count
+//             if (result[char] > 0) {
+//                 result[char]++;
+//             }
+//             // else if char is a number/letter then add char as key with value as one
+//             else {
+//                 result[char] = 1;
+//             }
+//         }
+//     }
+
+//     // return object at end
+//     return result
+// }
+
+function charCount(str) {
+    // make object to return at end
+    const result = {};
+
+    // loop over string, for each character
+    for (let char of str) {
+        //  (special character or space) don't do anything
+
+        // Could use regex, array of alpha-numeric characters, char codes, etc
+        // if (!/[a-z0-9]/.test(char))
+        //     continue;        
+
+        // Using this is more efficient than using regex
+        if (!isAlphaNumeric(char))
+            continue;
+
+        //  lower case character
+        char = char.toLowerCase();
+
+        // if char is a number/letter AND key in object, add one to count
+        result[char] = ++result[char] || 1;
+    }
+
+    // return object at end
+    return result
+}
+
+const isAlphaNumeric = (char) => {
+    const code = char.charCodeAt(0);
+    return ((code > 47 && code < 58) // numeric 0-9
+        || (code > 64 && code < 91) // Alphabet A-Z
+        || (code > 96 && code < 123)); //Alphabet a-z
+}
+
+console.log(charCount("Hi There!"));

@@ -1,0 +1,29 @@
+// Types of examples
+//      - User Stories
+//      - Unit tests (TDD)
+
+// Explore examples
+//      - Start with simple examples
+//      - Continue with more complex examples
+//      - Explore edge cases
+//          - Invalid Inputs (Including null and undefined)
+//          - Empty Inputs - No input or empty value
+
+//==========================================================================================
+//Write a function which takes in a string and returns counts of each character in a string.
+//==========================================================================================
+
+charCount("aaaa"); // (a:4)
+charCount("hello"); // {h:1, e:1, l:2, o:1}
+
+charCount("my phone numver is 12345")// do we account for spaces? What about numbers?
+charCount("Hello hi") // Do we use case sensitivity?
+
+//What do we return with empty values
+charCount();
+charCount("")
+
+//What do we return with invalid Inputs
+charCount(1)
+charCount(undefined);
+charcount(null);

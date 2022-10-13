@@ -1,0 +1,36 @@
+// Explicity write down the steps you need to take
+// Forces thinking about the code before jumping into writing it
+
+//============================================================================================
+// Write a function which takes in a string and returns counts of each character in the string
+//============================================================================================
+
+// Step 1
+function charCount(str) {
+    // do something
+
+
+    // return object with lowercase alpha-numeric characters with their counts
+}
+
+// Step 2
+function charCount(str) {
+    // make object to return at end
+
+    // loop over string
+
+    // return object at end
+}
+
+// Step 3
+function charCount(str) {
+    // make object to return at end
+
+    // loop over string, for each character
+    //      lower case character
+    //      if char is a number/letter AND key in object, add one to count
+    //      else if char is a number/letter then add char as key with value as one
+    //      else (special character or space) don't do anything
+
+    // return object at end
+}
