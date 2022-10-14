@@ -28,7 +28,7 @@ const countUniqueValues = (arr) => {
 
     // Current left index plus 1 is the number of unique values
     return leftPointer + 1;
-}
+} // = O(n)
 
 console.log(countUniqueValues([-2,1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 5, 5]));
 
