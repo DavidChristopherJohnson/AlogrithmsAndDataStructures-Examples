@@ -26,11 +26,10 @@ const countUniqueValues = (arr) => {
         }
     }
 
-    // Remove all values after the left pointer as we have all of the unique values
-    arr.splice(leftPointer + 1) // = O(n)
-    return arr.length;
+    // Current left index plus 1 is the number of unique values
+    return leftPointer + 1;
 }
 
-console.log(countUniqueValues([1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 5, 5]));
+console.log(countUniqueValues([-2,1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 5, 5]));
 
 //NOTE: This only works with sorted arrays
