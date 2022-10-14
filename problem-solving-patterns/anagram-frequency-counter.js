@@ -1,36 +1,30 @@
 const validAnagram = (firstString, secondString) => {
     // Check if string length is the same
-        //if not return false
+    if(firstString.length !== secondString.length)
+        return false;
 
-    const frequencyCounterOne = {};
-    const frequencyCounterTwo = {};
+    const lookup = {};
 
     //set up frequency counter of first string
     for(let char of firstString) // = O(n)
     {
-        frequencyCounterOne[char] = (frequencyCounterOne[char] || 0 ) + 1;
+        lookup[char] ? lookup[char] += 1 : lookup[char] = 1;
     }
 
-    // Set up frequency counter for second string
-    for(let char of secondString) // = O(n)
+    // Check each letter of second string
+    for(let char of secondString)// = O(n) 
     {
-        frequencyCounterTwo[char] = (frequencyCounterTwo[char] || 0) + 1
-    }
+        // If char is not in the lookup or lookup is 0
+        // then we have a mismatch
+        if(!lookup[char])           
+            return false
 
-    // Check frequencies match
-    for(key in frequencyCounterOne)// = O(n) 
-    {
-        // Check key is in second frequency counter
-        if(!frequencyCounterTwo[key])
-            return false;
-        
-        // Check value matches
-        if(frequencyCounterOne[key] !== frequencyCounterTwo[key])
-            return false;
+        // Decrease one from the lookup
+        lookup[char] -= 1;        
     }
     
     return true
-}
+} // = O(n)
 
 
 const testFunction = (value1, value2, expectedOutput) => {
