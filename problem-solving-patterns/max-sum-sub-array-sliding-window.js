@@ -1,3 +1,4 @@
+//Get the max total of consecutive numbers from the passed in array
 const maxSumSubArray = (arr, num) => {
     if(num > arr.length)
         return null;
@@ -24,4 +25,4 @@ const maxSumSubArray = (arr, num) => {
     return maxSum;
 } // = O(n)
 
-console.log(maxSumSubArray([1,2,3,4,2,3,3], 2));
+console.log(maxSumSubArray([1,2,3,4,0,3,-5,7,2,3,4,5,2,11,3], 1));
