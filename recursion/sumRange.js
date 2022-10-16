@@ -11,6 +11,20 @@ const sumRange = (num) => {
     return num + sumRange(num - 1);
 }
 
-console.log(sumRange(-10));
+console.log(sumRange(3));
 
 //NOTE: Example provided from Colt Steele's course
+
+//  sumRange(3)
+//      return 3 + sumRange(2)
+//          sumRange(2)
+//              return 2 + sumRange(1)
+//                  sumRange(1)
+//                      return 1
+//
+//  
+//-------Return stack-----
+//  return 1
+//      return 1 + 2 (3)
+//          return 3 + 3 (6)
+
