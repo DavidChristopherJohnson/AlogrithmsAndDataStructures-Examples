@@ -24,3 +24,20 @@ function wakeUp() {
 }
 
 wakeUp()
+
+//  CALLS wakeUp
+//  ADDS wakeUp to calls stack
+//      CALLS takeShower
+//      ADDS takeShower to call stack
+//          RUN takeShower returns value
+//      REMOVES takeShower from call stack
+//      CALLS eatBreakfast
+//      ADDS eatBeakfast to call stack 
+//          CALLS cookFood
+//          ADDS cookFood to the call stack
+//              RUN cook food functionality and returns value
+//          REMOVES cookFood from call stack
+//          RUNS return value
+//      REMOVES eatBreakfast from call stack
+//  RUNS output to console
+//  REMOVES wakeUp from call stack
