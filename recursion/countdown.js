@@ -4,11 +4,11 @@ const countDown = (num) => {
 
     // This checks for the 'Base case' If we don't have this to stop the recursion we
     // will get an infinite loop
-    if(num === 0)
-        return 0;
+    if(num === 1)
+        return;
 
     // Call the function again with a new value
     countDown(num -1);
 }
 
-console.log(countDown(10));
+countDown(10);
