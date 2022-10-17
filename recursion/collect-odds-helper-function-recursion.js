@@ -30,3 +30,16 @@ const collectOdds = (nums) => {
 
 
 console.log(collectOdds([1,2,3,4,5]));
+
+// collectOddValues([1,2,3,4,5])
+//      let results = []
+//      collectOddValuesHelper([1,2,3,4,5])
+//          results.push[1];
+//          collectOddvaluesHelper([2,3,4,5)])
+//              collectOddValuesHelper([3,4,5])
+//                  results.push[3]
+//                  collectOddValuesHelper([4,5])
+//                      collectOddValuesHelper([5])
+//                          results.push[1]
+//                          collectOddValuesHelper([])
+//      return results   // = [1,2,3,4,5]
