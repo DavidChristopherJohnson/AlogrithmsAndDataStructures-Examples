@@ -6,7 +6,7 @@ const binarySearch = (arr, val) => {
     while (lowerBound <= upperBound)
     {
         // Set midpoint value
-        let midpoint = Math.floor(upperBound + lowerBound / 2)
+        let midpoint = Math.ceil((upperBound + lowerBound) / 2)
 
         if(arr[midpoint] > val)
             // Value is lower than the midpoint
@@ -15,15 +15,16 @@ const binarySearch = (arr, val) => {
         else if(arr[midpoint] < val)
             // Value is higher than the midpoint,
             // so increase the lower bound
-            upperBound = midpoint + 1;
+            lowerBound = midpoint + 1;
         else
             // Found the value, return it
             return midpoint;
     }
 
     // Not found
-    return null
+    return -1
 }
 
 
-console.log(binarySearch(['paul','susan','terry','xena', 'zack'], 'bernard'));
+console.log(binarySearch(['paul','sus an','terry','xena', 'zack'], 'bernard'));
+console.log(binarySearch([1,2,3,4,5], 1))
