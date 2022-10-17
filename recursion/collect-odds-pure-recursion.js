@@ -26,3 +26,12 @@ console.log(collectOdds([1,2,3,4,5]));
 // NOTE: Shorter than the helper function method
 // NOTE: Arguably a little harder to read than the helper function method
 // NOTE: Uses more objects than the helper function method (creates a new array for each time the function is called)
+
+// collectOddValues(1,2,3,4,5)                         
+//  [1].concat(collectOddvalues[2,3,4,5])             = [1,3,5]
+//      [].concat(collectOrderValues[3,4,5])          = [3,5]
+//          [3].concat(collectOrderValues([4,5]))     = [3,5]
+//              [].concat(collectOrderValues([5]))    = [5]
+//                  [5].concat(collectOrderValues[])  = [5]
+//                      return []
+//  return [1,3,5]
