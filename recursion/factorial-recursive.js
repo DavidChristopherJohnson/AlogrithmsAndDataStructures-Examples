@@ -11,4 +11,11 @@ const factorial = (num) =>
     return num * factorial(num -1);
 }
 
-console.log(factorial(10));
+console.log(factorial(3));
+
+//factorial(3)
+//  factorial(2)
+//      factorial(1)
+//          return 1
+//       return 1 * 2 (2)
+//  return 3 * 2 (6)
