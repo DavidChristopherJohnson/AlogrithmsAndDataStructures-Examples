@@ -1,6 +1,32 @@
 // This is the bubble sort example provided by Colt Steele in his course
 
-// UNOPTIMIZED VERSION OF BUBBLE SORT
+// Very Unoptimised
+const bubbleSortVeryUnoptimized = (arr) => {
+    // Loop through each item to get the first value to compare
+    for (let i = 0; i < arr.length; i++) {
+        // For through each item in the array for the second value to compare 
+        for (let j = 0; j < arr.length; j++) {
+            // If the value index j is greated than index at j + 1
+            // swap the values 
+            if (arr[j] > arr[j + 1]) {
+                // Store the value of J so we don't loose it when we overwrite it
+                const temp = arr[j];
+                // Set the index of J to the value that is in the index of j + 1
+                arr[j] = arr[j + 1];
+                // Now the item in j + 1 has been set to the index of j
+                // restore the value of j into the index of j + 1
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+
+let result = bubbleSortVeryUnoptimized([8, 1, 2, 3, 4, 5, 6, 7]);
+console.log('Bubble Sort Very Unoptimized: ', result);
+
+
+// Unpotimized version of bubble sort
 const bubbleSortUnoptimized = (arr) => {
     // For each item starting at the end loop through. This is used to reduce the amount
     // of items we have to iterate over in future as the largest value will be at the 
@@ -24,7 +50,7 @@ const bubbleSortUnoptimized = (arr) => {
     return arr;
 }
 
-let result = bubbleSortUnoptimized([8, 1, 2, 3, 4, 5, 6, 7]);
+result = bubbleSortUnoptimized([8, 1, 2, 3, 4, 5, 6, 7]);
 console.log('Bubble Sort Unoptimized: ', result);
 
 // ES2015 Version
